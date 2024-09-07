@@ -1,11 +1,17 @@
 /* Estilo para el encabezado */
 header {
     display: flex;
-    flex-direction: row; /* Asigna la posición de los items en el encabezado */
+    flex-direction: row; /* Asigna la posición de los ítems en el encabezado */
     justify-content: space-between;
     background-color: rgb(255, 180, 243); /* Color de fondo */
-    width: 100vw; /* Ocupa el 100% del ancho del viewport */
+    width: 100%; /* Ocupa el 100% del ancho del viewport */
     padding: 10px; /* Espacio interno en el encabezado */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+header img {
+    max-width: 150px; /* Limita el tamaño del logo */
+    height: auto; /* Mantiene la relación de aspecto */
 }
 
 /* Estilo para la lista en el encabezado */
@@ -17,14 +23,19 @@ header ul {
     padding: 0; /* Elimina el padding predeterminado */
 }
 
-/* Estilo para los ítems de la lista en el encabezado */
 header ul li {
     margin: 0 10px; /* Margen horizontal para los ítems */
 }
 
+header ul a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
 /* Estilo para las imágenes */
 img {
-    width: 150px; /* Ancho fijo para las imágenes */
+    max-width: 100%; /* Ajusta el tamaño de la imagen según el contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
 }
 
 /* Estilo para los títulos h1 */
@@ -32,22 +43,24 @@ h1 {
     font-size: 24px; /* Tamaño de la fuente */
     color: rgb(110, 9, 88); /* Color del texto */
     font-family: 'Times New Roman', Times, serif; /* Tipo de fuente */
+    margin: 10px 0; /* Espacio vertical */
 }
 
 /* Estilo para los párrafos */
 p {
     font-size: 16px; /* Tamaño de la fuente */
     color: rgb(49, 49, 49); /* Color del texto */
+    margin: 0 0 10px 0; /* Margen inferior */
 }
 
 /* Estilo para el contenedor general */
 .contenedor {
     display: flex; /* Usar caja flexible */
     flex-direction: row; /* Colocar los elementos en fila */
+    flex-wrap: wrap; /* Permite el ajuste de línea en pantallas pequeñas */
     width: 100%; /* Ancho completo */
-    height: auto; /* Ajusta la altura automáticamente */
     margin: 10px 0; /* Margen vertical */
-    color: rgb(95, 8, 76); /* Color del texto */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
 }
 
 /* Estilo para la caja dentro del contenedor */
@@ -58,11 +71,14 @@ p {
     flex-direction: column; /* Colocar los elementos en columna */
     text-align: center; /* Alinear el texto al centro */
     align-items: center; /* Centrar los elementos en la caja */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
 }
 
 /* Estilo para las imágenes dentro de la caja */
 .caja img {
     border-radius: 60%; /* Bordes redondeados */
+    max-width: 100%; /* Ajusta el tamaño según el contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
 }
 
 /* Estilo para los párrafos dentro de la caja */
@@ -80,6 +96,10 @@ p {
 }
 
 /* Estilo para la presentación de imágenes con título centrado */
+.presentacion {
+    position: relative; /* Necesario para el posicionamiento absoluto del h1 */
+}
+
 .presentacion h1 {
     position: absolute;
     top: 50%;
@@ -96,4 +116,28 @@ p {
     width: 100vw; /* Ocupa el 100% del ancho del viewport */
     height: 100vh; /* Ocupa el 100% de la altura del viewport */
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+}
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca el contenido en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    header ul {
+        flex-direction: column; /* Coloca los ítems de la lista en columna */
+    }
+
+    header ul li {
+        margin: 5px 0; /* Margen vertical para los ítems */
+    }
+
+    .contenedor {
+        flex-direction: column; /* Coloca las cajas en columna */
+    }
+
+    .caja {
+        width: 90%; /* Ancho reducido para pantallas pequeñas */
+    }
 }
