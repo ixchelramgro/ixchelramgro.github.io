@@ -1,0 +1,99 @@
+/* Estilo para el encabezado */
+header {
+    display: flex;
+    flex-direction: row; /* Asigna la posición de los items en el encabezado */
+    justify-content: space-between;
+    background-color: rgb(255, 180, 243); /* Color de fondo */
+    width: 100vw; /* Ocupa el 100% del ancho del viewport */
+    padding: 10px; /* Espacio interno en el encabezado */
+}
+
+/* Estilo para la lista en el encabezado */
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+}
+
+/* Estilo para los ítems de la lista en el encabezado */
+header ul li {
+    margin: 0 10px; /* Margen horizontal para los ítems */
+}
+
+/* Estilo para las imágenes */
+img {
+    width: 150px; /* Ancho fijo para las imágenes */
+}
+
+/* Estilo para los títulos h1 */
+h1 {
+    font-size: 24px; /* Tamaño de la fuente */
+    color: rgb(110, 9, 88); /* Color del texto */
+    font-family: 'Times New Roman', Times, serif; /* Tipo de fuente */
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 16px; /* Tamaño de la fuente */
+    color: rgb(49, 49, 49); /* Color del texto */
+}
+
+/* Estilo para el contenedor general */
+.contenedor {
+    display: flex; /* Usar caja flexible */
+    flex-direction: row; /* Colocar los elementos en fila */
+    width: 100%; /* Ancho completo */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin: 10px 0; /* Margen vertical */
+    color: rgb(95, 8, 76); /* Color del texto */
+}
+
+/* Estilo para la caja dentro del contenedor */
+.caja {
+    width: 100%; /* Ancho completo del contenedor */
+    display: flex; /* Usar caja flexible */
+    padding: 10px; /* Espacio interno */
+    flex-direction: column; /* Colocar los elementos en columna */
+    text-align: center; /* Alinear el texto al centro */
+    align-items: center; /* Centrar los elementos en la caja */
+}
+
+/* Estilo para las imágenes dentro de la caja */
+.caja img {
+    border-radius: 60%; /* Bordes redondeados */
+}
+
+/* Estilo para los párrafos dentro de la caja */
+.caja p {
+    font-size: 12px; /* Tamaño de la fuente */
+    color: rgb(134, 0, 74); /* Color del texto */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para la dirección en el pie de página */
+.direccion {
+    text-align: right; /* Alinea el texto a la derecha */
+    padding: 10px; /* Espacio alrededor del contenido */
+    background-color: #f1f1f1; /* Color de fondo para el pie de página */
+}
+
+/* Estilo para la presentación de imágenes con título centrado */
+.presentacion h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    font-size: 2em; /* Tamaño de la fuente */
+    pointer-events: none; /* El texto no interfiere con los clics */
+}
+
+/* Estilo para las imágenes en la presentación */
+.presentacion img {
+    width: 100vw; /* Ocupa el 100% del ancho del viewport */
+    height: 100vh; /* Ocupa el 100% de la altura del viewport */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsión */
+}
